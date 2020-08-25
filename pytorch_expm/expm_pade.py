@@ -1,8 +1,8 @@
 import torch
 import numpy as np
 
-from expm32 import expm32
-from expm64 import expm64
+from .expm32 import expm32
+from .expm64 import expm64
 
 def differential(A, E, f):
     n = A.size(0)
@@ -34,4 +34,4 @@ class expm_pade_class(torch.autograd.Function):
         return differential(A.t(), G, expm)
 
 
-expm = expm_pade_class.apply
+expm_p = expm_pade_class.apply

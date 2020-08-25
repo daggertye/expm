@@ -286,4 +286,4 @@ class expm_taylor_class(torch.autograd.Function):
             return differential(A.transpose(-2, -1), G, expm_taylor)
 
 
-expm = expm_taylor_class.apply
+expm_t = expm_taylor_class.apply
